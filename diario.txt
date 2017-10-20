@@ -1,0 +1,16 @@
+2017/10/10
+repaso de operaciones de git
+configuración inicual:
+git config --global user.name carmar04
+git config --global user.email 1dam.csoro@institutoserpis.org
+git config --global push.default simple
+
+clonado:
+git clone https://github.com/carmar04/ed.git
+
+nueva versión:
+git add diario.text (marca el fichero diario.txt)
+git commit -m "resumen motivo de la nueva version" (incluye los marcados)
+
+publicación en remoto:
+git push (pedira usuario y contraseña)
