@@ -13,23 +13,28 @@ public class Adivina {
 		
 		int numeroAleatorio = random.nextInt(1000) + 1;
 		System.out.println("Numero aleatorio ="+numeroAleatorio);
-		System.out.print("Adivina el numero (de 1 a 1000): ");
 		
+		int contadorDeIntentos = 1;
+	
+		System.out.printf("Adivina el numero (de 1 a 1000)[intento %d]: ",
+				contadorDeIntentos);
+
 		String numero = scanner.nextLine();
 		int numeroIntroducido = Integer.parseInt(numero);
-		int contador=0;
 		while (numeroIntroducido!=numeroAleatorio) {
-			contador++;
+			contadorDeIntentos++;
 			if(numeroAleatorio<numeroIntroducido) {
-				System.out.println("Es menor que ese. Vuelve a intentarlo: ");
+				System.out.printf("Es menor que ese. Vuelve a intentarlo: [intento %d]: ",  
+						contadorDeIntentos);
 			}else {
-				System.out.println("Es mayor que ese. Vuelve a intentarlo: ");
+				System.out.printf("Es mayor que ese. Vuelve a intentarlo: [intento %d]: ",
+						contadorDeIntentos);
 			}
 			numero = scanner.nextLine();
 			numeroIntroducido = Integer.parseInt(numero);
 		}
-		System.out.println("Enhorabuena. Has acertado.");
-		System.out.println("Has realizado "+contador+" intentos");
-	}
+		System.out.printf("Enhorabuena. Has acertado en %s %s.\n", contadorDeIntentos,
+				contadorDeIntentos == 1 ? "intento" : "intentos");
+		}
 	
 }
