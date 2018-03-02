@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ASuma</string>
+    <string name="sumar">SUMAR</string>
+    <string name="resultado_es">Resultado es:</string>
+</resources>
