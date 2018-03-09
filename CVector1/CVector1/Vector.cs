@@ -15,7 +15,16 @@ namespace CVector1
 		/// <param name="initialIndex">Initial index.</param>
 		/// 
 		public static int IndexMin (int [] v, int initialIndex) {
-			return -1;
+			if (initialIndex >= v.Length) {
+				throw new IndexOutOfRangeException ();
+			}
+			int indexMin = initialIndex;
+			for (int index = initialIndex + 1; index < v.Length; index++) {
+				if (v [index] < v [initialIndex]) {
+					indexMin = index;
+				}
+			}
+			return IndexMin;
 		}
 		/// <summary>
 		/// Swap the specified v, index and otherIndex.
