@@ -19,19 +19,7 @@ public class Vector {
 
 	}
 	
-	public static int indexOf(int[] v,int value) {
-//		int index = 0;
-//		while(index < v.length && v[index] != value)//cuidado con la condición
-//			index++;
-//		if(index == v.length)
-//			index = -1;
-//			return index;
-//		
-//		for(int index = 0;index < v.length;index++)
-//			if(v[index] == value)
-//				return index;
-//	return -1;
-		
+	public static int indexOf(int[] v,int value) {		
 		int index = 0;
 		while( index < v.length && v[index] != value)
 			index++;
@@ -44,5 +32,18 @@ public class Vector {
 	                 iMenor = v[numero];
 	         }
 	         return iMenor;
+	}
+	public static int bynarySearch(int[]v,int a) {
+		
+		for(int r = 0, l = v.length;r<l;r++, l--) {
+			if(a == v[r]) {
+				return v[r];
+			}else if(a == v[l]){
+				return v[l];
+			}else{
+				System.out.print("No se ha encontrado el "+a+" en el array");
+				return -a;
+			}
+		}
 	}
 }
