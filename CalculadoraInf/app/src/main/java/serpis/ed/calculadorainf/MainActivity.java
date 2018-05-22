@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 outputBinary.setText(null);
                 outputOctal.setText(null);
                 outputHexadecimal.setText(null);
+
             }
         });
     }
